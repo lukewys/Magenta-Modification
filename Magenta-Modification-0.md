@@ -4,10 +4,9 @@
 
 最近在魔改Magenta，所以会涉及到阅读、修改Magenta的源代码。我个人认为Magenta是一个很好的项目，虽然代码可能写的有点乱，但模型的架构写的都很好，从主观上来看（听），做出的自动作曲模型效果也很优异。Magenta可以为做深度学习自动作曲的研究者提供一个参考，同时我在这里也希望给有兴趣的朋友提供一些经验。
 
-**Note:我的解决方法不一定是最优的，除了我的解决方案之外，读者可以自行参考Magenta官方给出的一些文档（尽管相当散乱且不连续）。
-本文的目标是尽量使读者快速了解Magenta项目以及代码结构，并着手按自己的想法修改。
+**Note:我的解决方法不一定是最优的，除了我的解决方案之外，读者可以自行参考Magenta官方给出的一些文档（尽管相当散乱且不连续）。本文的目标是尽量使读者快速了解Magenta项目以及代码结构，并着手按自己的想法修改。**
 
-**Update：2019.5：修改了一些内容并更新了Magenta的版本。
+**Update：2019.5：修改了一些内容并更新了Magenta的版本。**
 
 ## Magenta是什么：
 
@@ -70,15 +69,13 @@ sudo apt-get install build-essential libasound2-dev libjack-dev
 如果需要用到GPU，可以直接将上文中```pip install magenta```替换成```pip install magenta-gpu```。
 ```magenta```和```magenta-gpu```的区别仅在后者多了```tensorflow-gpu```库。
 
-当然，如果需要运行```tensorflow-gpu```，需要安装NVIDIA显卡驱动和CUDA 以及Cudnn，请读者自行搜索方法，这里就不再赘述了。
+当然，如果需要运行```tensorflow-gpu```，需要安装NVIDIA显卡驱动和CUDA 以及Cudnn，请读者自行搜索方法，这里就不再赘述了。
 
 ## 训练/生成：
 
 Magenta提供了命令行（Linux\Mac），在windows系统上，也可以使用bazel环境进行命令行操作。我们可以通过命令行来进行训练、用生成的权重或官方提供的权重进行自动作曲。
 
 我在之后的文章中会分析训练和生成的具体代码。如果你想先试着运行一下Magenta，可以参考如下内容：
-
-
 
 Magenta的GitHub内各个Model的文档，以polyphony_rnn为例：
 
